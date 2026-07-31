@@ -1,0 +1,21 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Generated outputs (optional)
+outputs/*
+!outputs/.gitkeep
+
+# Log file (if you don't want to version it)
+# logs.txt
