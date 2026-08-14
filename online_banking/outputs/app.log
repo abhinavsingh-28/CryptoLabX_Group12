@@ -1,0 +1,18 @@
+2026-08-14 14:48:51,024 [INFO] online_banking.db - Database seeded with sample users: alice/password123, bob/bob@2024, admin/admin
+2026-08-14 14:48:51,024 [INFO] online_banking.db - Database initialised at /Users/abhinav/Desktop/Crypto/CryptoLabX_Group12/online_banking/outputs/banking.db
+2026-08-14 14:48:51,024 [DEBUG] online_banking.db - Executing login query: SELECT * FROM users WHERE username = 'alice' AND password = 'password123'
+2026-08-14 14:48:51,025 [DEBUG] online_banking.db - Executing login query: SELECT * FROM users WHERE username = 'alice' AND password = 'wrongpassword'
+2026-08-14 14:48:51,025 [DEBUG] online_banking.db - Executing login query: SELECT * FROM users WHERE username = '' OR '1'='1' --' AND password = 'anything'
+2026-08-14 14:48:51,025 [DEBUG] online_banking.db - Executing search query: SELECT id, username, full_name FROM users WHERE username LIKE '%alice%'
+2026-08-14 14:48:51,025 [DEBUG] online_banking.db - Executing search query: SELECT id, username, full_name FROM users WHERE username LIKE '%' UNION SELECT id, username, password FROM users --%'
+2026-08-14 14:48:51,025 [INFO] online_banking.session - Session created — token=1000, user=bob, password=bob@2024, balance=8000.00
+2026-08-14 14:48:51,025 [INFO] online_banking.banking - Balance inquiry — user_id=1, balance=15000.00
+2026-08-14 14:48:51,025 [INFO] online_banking.banking - Transaction history requested — user_id=1, count=1
+2026-08-14 14:48:51,026 [INFO] online_banking.beneficiary - Beneficiaries listed — owner_id=1, count=1
+2026-08-14 14:48:51,026 [INFO] online_banking.banking - Balance inquiry — user_id=1, balance=15000.00
+2026-08-14 14:48:51,027 [INFO] online_banking.banking - Transfer executed — from_user=1 (new_bal=14900.00), to_user=2 (new_bal=8100.00), amount=100.00
+2026-08-14 14:48:51,028 [INFO] online_banking.banking - Balance inquiry — user_id=1, balance=14900.00
+2026-08-14 14:48:51,028 [INFO] online_banking.auth - Login attempt — username=alice, password=password123
+2026-08-14 14:48:51,028 [DEBUG] online_banking.db - Executing login query: SELECT * FROM users WHERE username = 'alice' AND password = 'password123'
+2026-08-14 14:48:51,028 [INFO] online_banking.session - Session created — token=1001, user=alice, password=password123, balance=14900.00
+2026-08-14 14:48:51,028 [INFO] online_banking.auth - Login successful — user=alice, token=1001

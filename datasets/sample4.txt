@@ -1,0 +1,3 @@
+Modern cryptography includes AES, RSA and ECC.
+
+Security depends on keys rather than secrecy of algorithms.

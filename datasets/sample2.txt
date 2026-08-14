@@ -1,0 +1,5 @@
+Python is an easy language to learn.
+
+It supports object oriented programming.
+
+Cryptography requires mathematics and programming skills.

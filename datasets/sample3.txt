@@ -1,0 +1,3 @@
+Frequency analysis is one of the oldest cryptanalysis techniques.
+
+It is useful against substitution ciphers.

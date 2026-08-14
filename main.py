@@ -3,6 +3,10 @@ from utils.menu import display_menu
 from utils.input_handler import get_choice
 
 
+#file analyzer 
+from analysis.file_analyzer import analyze_file
+
+
 def encrypt():
     print("\n========== Encrypt ==========")
     print("Coming Soon...")
@@ -22,9 +26,7 @@ def attack():
 
 
 def analyze():
-    print("\n========== Analyze ==========")
-    print("Coming Soon...")
-    input("\nPress Enter to continue...")
+    analyze_file()
 
 
 def main():
