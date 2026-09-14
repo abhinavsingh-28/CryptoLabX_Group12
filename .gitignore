@@ -19,3 +19,5 @@ outputs/*
 
 # Log file (if you don't want to version it)
 # logs.txt
+
+*.exe
