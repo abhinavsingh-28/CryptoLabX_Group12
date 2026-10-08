@@ -106,7 +106,6 @@ if __name__ == "__main__":
     print(f"Original Ciphertext length: {len(ciphertext)} bytes")
     print("\n[*] Starting Padding Oracle Attack (Zero knowledge of AES key)...")
     
-    global oracle_queries
     oracle_queries = 0
     
     # Execute Attack
