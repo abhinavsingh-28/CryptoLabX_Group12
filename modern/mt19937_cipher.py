@@ -3,10 +3,22 @@ Assignment 10 - Part A: MT19937 Stream Cipher & 16-Bit Seed Brute-Force Attack
 Uses Python's built-in random.Random (MT19937) extracting 8-bit outputs per byte.
 """
 
+import os
+import sys
+
+# Prevent local 'math/' folder in CryptoLabX_Group12 from shadowing Python's stdlib 'math'
+_PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+_SHADOWED_PATHS = [p for p in sys.path if os.path.abspath(p or ".") == _PROJECT_ROOT]
+for _p in _SHADOWED_PATHS:
+    sys.path.remove(_p)
+
+import math  # noqa: F401 - Preload stdlib math into sys.modules before repo root is active
 import random
 import secrets
 import string
 from typing import Dict, Iterator, Optional, Tuple
+
+sys.path.extend(_SHADOWED_PATHS)
 
 
 def mt19937_keystream(seed: int, length: int) -> Iterator[int]:
@@ -47,7 +59,6 @@ def generate_known_suffix_plaintext(known_suffix: bytes = b"A" * 14) -> Tuple[by
     """
     Step 3: Generate plaintext with a random prefix of 5-20 printable ASCII
     characters followed by 14 consecutive 'A' characters.
-    Uses cryptographically secure randomness (secrets) to pick the prefix.
     """
     prefix_len = secrets.randbelow(16) + 5  # Random integer in [5, 20]
     alphabet = string.ascii_letters + string.digits + "!@#$%^&*()-_=+"
