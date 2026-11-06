@@ -23,3 +23,5 @@ outputs/*
 *.exe
 
 *.exe
+
+datasets/rng_samples/*.bin
